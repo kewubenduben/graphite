@@ -109,8 +109,8 @@ graphite-web attributes
 * `node['graphite']['ssl']['ca_certificate_file']` - the path to the intermediate CA certificate file if ssl is enabled. Leave blank if you don't have or need one.
 * `node['graphite']['apache']['basic_auth']['enabled']` - enable basic auth in the apache2 vhost to require authentication for access to web interface (defaults to false)
 * `node['graphite']['apache']['basic_auth']['file_path']` - location of htpasswd file for basic auth (defaults to node['graphite']['doc_root']/htpasswd)
-* `node['graphite']['apache']['basic_auth']['user']` - username for basic auth
-* `node['graphite']['apache']['basic_auth']['pass']` - password for basic auth
+* `node['graphite']['apache']['basic_auth']['users_databag']` - the databag containing users to search for. (defaults to `users`)
+* `node['graphite']['apache']['basic_auth']['users_databag_group']` - users databag group considered Graphite admins (defaults to `sysadmin`)
 * `node['graphite']['uwsgi_socket']` - the socket to bind uwsgi process to (only needed if using uwsgi)
 
 ### database settings

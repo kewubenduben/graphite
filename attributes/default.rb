@@ -74,5 +74,5 @@ default['graphite']['ssl']['certificate_key_file'] = '/etc/ssl/server.key'
 
 default['graphite']['apache']['basic_auth']['enabled'] = false
 default['graphite']['apache']['basic_auth']['file_path'] = "#{node['graphite']['doc_root']}/htpasswd"
-default['graphite']['apache']['basic_auth']['user'] = nil
-default['graphite']['apache']['basic_auth']['pass'] = nil
+default['graphite']['apache']['basic_auth']['users_databag'] = 'users'
+default['graphite']['apache']['basic_auth']['users_databag_group'] = 'sysadmin'
